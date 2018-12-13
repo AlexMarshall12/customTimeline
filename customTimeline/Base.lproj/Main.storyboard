@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="customTimeline" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fzI-eG-OUg">
+                                <rect key="frame" x="10" y="318.5" width="355" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jWE-A3-4W0"/>
+                                </constraints>
+                                <collectionViewLayout key="collectionViewLayout" id="aON-V0-SK7" customClass="CustomCollectionViewLayout" customModule="customTimeline" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="singleCell" id="lR9-Fl-zoX">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GtK-H2-62U">
+                                <rect key="frame" x="186.5" y="269.5" width="2" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Psp-xE-NAQ"/>
+                                    <constraint firstAttribute="width" constant="2" id="rvZ-pY-hLa"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Od6-Mu-sBa">
+                                <rect key="frame" x="0.0" y="505" width="375" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="uOx-li-vn7"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGa-Oa-TjI">
+                                <rect key="frame" x="172.5" y="475" width="30" height="30"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="goTo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EtZ-5O-GAG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GtK-H2-62U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8aH-ss-Hfx"/>
+                            <constraint firstItem="fzI-eG-OUg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="CVV-bR-RKu"/>
+                            <constraint firstItem="Od6-Mu-sBa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DDe-p9-IpY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fzI-eG-OUg" secondAttribute="trailing" constant="10" id="GEN-9X-djS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Od6-Mu-sBa" secondAttribute="bottom" id="SL3-Wh-Iot"/>
+                            <constraint firstItem="kGa-Oa-TjI" firstAttribute="bottom" secondItem="Od6-Mu-sBa" secondAttribute="top" id="TOp-Wh-RUt"/>
+                            <constraint firstItem="GtK-H2-62U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YdV-Tm-xdA"/>
+                            <constraint firstItem="kGa-Oa-TjI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mtD-Ga-7Wc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Od6-Mu-sBa" secondAttribute="trailing" id="uC9-CW-QHD"/>
+                            <constraint firstItem="fzI-eG-OUg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="zoT-iw-llp"/>
+                            <constraint firstItem="fzI-eG-OUg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zuN-Gf-vyx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="customCollectionView" destination="fzI-eG-OUg" id="wDY-Ey-xdk"/>
+                        <outlet property="picker" destination="Od6-Mu-sBa" id="OhQ-6i-OGB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
